@@ -1,0 +1,117 @@
+:root {
+  --primary: cadetblue;
+  --accent: #5f6ba0;
+  --accent-dark: #525c87;
+  --title-font: 'Roboto Slab', serif;
+  --primary-font: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, body, p {
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  place-items: center;
+  background-color: var(--primary);
+  font-family: var(--primary-font);
+}
+
+body,
+input {
+  font-family: var(--primary-font);
+}
+
+.main-title {
+  margin-bottom: 2rem;
+  font-family: var(--title-font);
+}
+
+.form {
+  max-width: 300px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, .5);
+  background-color: white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .15);
+  padding: 2rem;
+  transition: background-color .2s;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__field {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.form__field--error {
+  --form-field-error-color: red;
+}
+
+.form__input {
+  order: 2;
+  border: 2px solid var(--form-field-error-color, lightgray);
+  padding: .5rem;
+  border-radius: 3px;
+  font-size: 1rem;
+  color: #888888;
+  transition: color .2s, border-color .2s;
+}
+
+.form__input:focus {
+  outline: none;
+  color: #232323;
+  border-color: var(--form-field-error-color, var(--primary));
+}
+
+.form__input:focus + .form__label {
+  color: var(--primary);
+}
+
+.form__label {
+  order: 1;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: color .2s;
+  font-size: .85rem;
+}
+
+.form__field-error {
+  order: 3;
+  font-size: .75rem;
+  height: .75rem;
+  margin-top: 0.25rem;
+  color: var(--form-field-error-color);
+}
+
+.form__submit {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  background-color: var(--accent);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 3px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, .15);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-size: .8rem;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.form__submit:hover {
+  background-color: var(--accent-dark);
+}

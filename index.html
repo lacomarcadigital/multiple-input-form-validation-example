@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple inputs form validation</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="main">
+    <form id="form" class="form">
+      <div class="form__field" id="name-field">
+        <input autocomplete="off" type="text" class="form__input" id="name" placeholder="Name">
+        <label for="name" class="form__label">Name</label>
+        <p id="name-field-error" class="form__field-error"></p>
+      </div>
+      <div class="form__field" id="surname-field">
+        <input autocomplete="off" type="text" class="form__input" id="surname" placeholder="Surname">
+        <label for="surname" class="form__label">Surname</label>
+        <p id="surname-field-error" class="form__field-error"></p>
+      </div>
+      <div class="form__field" id="email-field">
+        <input autocomplete="off" type="email" class="form__input" id="email" placeholder="Email">
+        <label for="email" class="form__label">Email</label>
+        <p id="email-field-error" class="form__field-error"></p>
+      </div>
+      <div class="form__field" id="age-field">
+        <input autocomplete="off" type="number" class="form__input" id="age" placeholder="Age">
+        <label for="age" class="form__label">Age</label>
+        <p id="age-field-error" class="form__field-error"></p>
+      </div>
+      <div class="form__actions">
+        <input type="submit" value="Send" class="form__submit">
+      </div>
+    </form>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
